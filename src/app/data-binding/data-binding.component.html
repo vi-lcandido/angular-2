@@ -1,4 +1,5 @@
-<section class="property-binding">
+<!-- <section class="property-binding">
+
   <article>
     <h3>Interpolation</h3>
     <p>{{ url }}</p>
@@ -45,5 +46,49 @@
       </div>
 
     </div>
+  </article>
+
+  <article>
+    <h3>Event Binding</h3>
+    <div>
+      <button 
+      (click)="clickedButton()"
+      class="btn btn-primary" >
+      Click me
+    </button>
+    <br><br>
+
+    <input type="text" 
+    (keyup)="onKeyUp($event)"
+    (keyup.enter)="saveValue(campoInput.value)"
+    (blur)="saveValue(campoInput.value)"
+    #campoInput
+    />
+    <p>Valor atual: {{ valueInput }}</p>
+    <p>Valor salvo: {{ savedValue }}</p>
+
+    <br><br>
+
+    <span
+    (mouseover)="onMouseOverOut()"
+    (mouseout)="onMouseOverOut()"
+    [class.higlight]="isMouseOver">
+    Pase o mouse sobre mim
+   </span>
+    </div>
+  </article>
+
+</section> -->
+
+<!-- <app-meu-form></app-meu-form> -->
+
+<section class="input-output-properties">
+  <article>
+    <h3>Input/output Properties</h3>
+    <app-curso [name]="courseName"></app-curso>
+
+    <contador [value]="initialValue"
+    (changeValue)="onChangeValue($event)"
+    ></contador>
   </article>
 </section>
